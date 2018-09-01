@@ -1,6 +1,7 @@
 require "pry"
 class School
   attr_accessor :name, :roster
+  
   def initialize(name)
     @name = name
     @roster = {}
@@ -16,8 +17,8 @@ class School
   end
   
   def sort
-    new_hash ={}
-    roster.each do |grade, student|
+    new_hash = {}
+    @roster.each do |grade, student|
     new_hash[grade] = student.sort
     end
     new_hash
